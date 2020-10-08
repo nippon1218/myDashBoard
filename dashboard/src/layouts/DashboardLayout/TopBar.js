@@ -43,7 +43,7 @@ const TopBar = ({
           <Logo />
         </RouterLink>
         <Box flexGrow={1} />
-        <Hidden mdDown>
+        <Hidden lgUp>
           <IconButton color="inherit">
             <Badge
               badgeContent={notifications.length}
@@ -57,7 +57,7 @@ const TopBar = ({
             <InputIcon />
           </IconButton>
         </Hidden>
-        <Hidden lgUp>
+        <Hidden mdDown>
           <IconButton
             color="inherit"
             onClick={onMobileNavOpen}

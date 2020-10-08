@@ -25,9 +25,9 @@ import {
 import NavItem from './NavItem';
 
 const user = {
-  avatar: '/static/images/avatars/avatar_6.png',
+  avatar: '/static/images/avatars/avatar_11.png',
   jobTitle: 'Senior Developer',
-  name: 'Katarina Smith2'
+  name: 'Eva'
 };
 
 const items = [
@@ -121,13 +121,13 @@ const NavBar = ({ onMobileClose, openMobile }) => {
         <Typography
           className={classes.name}
           color="textPrimary"
-          variant="h5"
+          variant="h4"
         >
           {user.name}
         </Typography>
         <Typography
           color="textSecondary"
-          variant="body2"
+          variant="body3"
         >
           {user.jobTitle}
         </Typography>
@@ -145,6 +145,7 @@ const NavBar = ({ onMobileClose, openMobile }) => {
           ))}
         </List>
       </Box>
+      <Divider />
       <Box flexGrow={1} />
       <Box
         p={2}
@@ -184,7 +185,7 @@ const NavBar = ({ onMobileClose, openMobile }) => {
 
   return (
     <>
-      <Hidden lgUp>
+      <Hidden mdDown>
         <Drawer
           anchor="left"
           classes={{ paper: classes.mobileDrawer }}
@@ -195,7 +196,7 @@ const NavBar = ({ onMobileClose, openMobile }) => {
           {content}
         </Drawer>
       </Hidden>
-      <Hidden mdDown>
+      <Hidden lgUp>
         <Drawer
           anchor="left"
           classes={{ paper: classes.desktopDrawer }}
