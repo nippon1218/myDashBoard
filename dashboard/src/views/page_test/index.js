@@ -1,10 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import {Button} from '@material-ui/core';
+import axios from 'axios';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -26,6 +27,13 @@ const useStyles = makeStyles((theme) => ({
     maxHeight: '100%',
   },
 }));
+
+const ajaxfun = ()=> {
+    axios.get("http://localhost:6002/arr").then((ok)=>{
+        console.log(ok);
+    })
+}
+
 
 export default function ComplexGrid() {
   const classes = useStyles();
@@ -54,7 +62,7 @@ export default function ComplexGrid() {
               </Grid>
               <Grid container spacing={5}>
                       <Grid item>
-                         <Button >
+                         <Button onClick={ajaxfun}>
                            <Typography variant="body2" style={{ cursor: 'pointer' }}>
                                remove 
                            </Typography>
