@@ -6,6 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import {Button} from '@material-ui/core';
 import axios from 'axios';
+import Temp from './Temperature.js'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -84,6 +85,7 @@ export default function ComplexGrid() {
           </Grid>
         </Grid>
       </Paper>
+      <Temp />
     </div>
   );
 }
